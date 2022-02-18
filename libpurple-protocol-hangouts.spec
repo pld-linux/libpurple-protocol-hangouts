@@ -1,14 +1,14 @@
-%define		snap	20200610
-%define		commit	789eaca9d1a6
+%define		snap	20210629
+%define		commit	55b9f01d040b240b794700f44d9c21a6cb51251e
 Summary:	Hangouts plugin for libpurple
 Name:		libpurple-protocol-hangouts
 Version:	0.0.1
 Release:	0.%{snap}.1
 License:	GPL v3
 Group:		Applications/Communications
-Source0:	https://bitbucket.org/EionRobb/purple-hangouts/get/%{commit}.tar.bz2?/purple-hangouts-%{commit}.tar.bz2
-# Source0-md5:	5deff87dc6e13a61205dfbef99c81c77
-URL:		https://bitbucket.org/EionRobb/purple-hangouts/
+Source0:	https://github.com/EionRobb/purple-hangouts/archive/%{commit}/purple-hangouts-%{commit}.tar.gz
+# Source0-md5:	0cf8cb337edfd81e1584e3b59083f3f4
+URL:		https://github.com/EionRobb/purple-hangouts
 BuildRequires:	glib2-devel
 BuildRequires:	json-glib-devel
 BuildRequires:	libpurple-devel
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Hangouts plugin for libpurple.
 
 %prep
-%setup -qn EionRobb-purple-hangouts-%{commit}
+%setup -qn purple-hangouts-%{commit}
 
 %build
 %{__make} \
